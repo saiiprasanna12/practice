@@ -1,4 +1,4 @@
 #!/bin/bash
 
-DATE=$(date)
+DATE=$(git date)
 echo "DATE and time is ${DATE}"

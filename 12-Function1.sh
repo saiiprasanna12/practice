@@ -1,5 +1,17 @@
 #!/bin/bash
 
+VALIDATE()
+{
+   if [ $? -ne 0 ]
+then
+       echo " installing is failed"
+       exit 1
+else 
+       echo " installing is success"   
+fi    
+ 
+}
+
 ID=$(id -u)
 
 if [ $ID -ne 0 ]
@@ -12,12 +24,4 @@ fi # fi means reverse of if , indicating condition end
 
 yum install mysql -y
 
-if [ $? -ne 0 ]
-then
-       echo " installing MySQL is failed"
-       exit 1
-else 
-       echo " installing MySQL is success"   
-fi    
-
-yum install git -y
+VALIDATE

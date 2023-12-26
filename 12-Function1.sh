@@ -2,12 +2,12 @@
 
 VALIDATE()
 {
-   if [ $? -ne 0 ]
+   if [ $1 -ne 0 ]
 then
-       echo " installing is failed"
+       echo " installing $2 is failed"
        exit 1
 else 
-       echo " installing is success"   
+       echo " installing $2 is success"   
 fi    
  
 }
@@ -24,4 +24,8 @@ fi # fi means reverse of if , indicating condition end
 
 yum install mysql -y
 
-VALIDATE
+VALIDATE $? "MySQL"
+
+yum install git -y
+
+VALIDATE $? "GIT"

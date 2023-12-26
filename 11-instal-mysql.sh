@@ -15,4 +15,5 @@ if [ $? -ne 0 ]
 then
        echo " installing my sql failed"
 else 
-       echo "installin my sql success"       
+       echo "installin my sql success"   
+fi    

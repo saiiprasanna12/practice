@@ -8,7 +8,7 @@ N="e[/0m"
 
 VALIDATE()
 {
-if ($1 -ne 0)
+if [ $1 -ne 0 ]
 
 echo -e "installing  .. $2  is $R failed $N"
 exit1
@@ -23,9 +23,9 @@ LOFILE="/tmp/$0-$TIMESTAMP.log"
 echo "script started excecuted at $TIMESTAMP" &>>LOG_FILE
 
 
-if ($ID -ne 0)
+if [ $ID -ne 0 ]
 
-     echo (" ERROR :please run with root user ")
+     echo (" ERROR :please run with root user git add . ; git commit -m "m2" ; git push origin main")
      exit 1
 else
      echo("user are in root user")

@@ -20,9 +20,9 @@ echo -e "installing ..$2  is $G success $N"
 fi
 }
 
-LOFILE="/tmp/$0-$TIMESTAMP.log"
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-echo ("script started excecuted at $TIMESTAMP") &>>LOG_FILE
+echo ("script started excecuted at $TIMESTAMP") &>>LOGFILE
 
 
 if [ $ID -ne 0 ]
@@ -33,11 +33,11 @@ else
      echo("user are in root user")
 fi
 
-yum install mysql -y $>>LOGFILE
+yum install mysql -y &>>LOGFILE
 
 VALIDATE $? "MYSQL"
 
-yum install git -y $>>LOGFILE
+yum install git -y &>>LOGFILE
 
 VALIDATE $? "GIT"
 

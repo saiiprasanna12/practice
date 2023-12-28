@@ -22,7 +22,7 @@ fi
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-echo ("script started excecuted at $TIMESTAMP") &>>LOGFILE
+echo ("script started excecuted at $TIMESTAMP") &>> $LOGFILE
 
 
 if [ $ID -ne 0 ]

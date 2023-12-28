@@ -21,7 +21,7 @@ fi
 }
 
 LOFILE="/tmp/$0-$TIMESTAMP.log"
-echo "script started excecuted at $TIMESTAMP" &>>LOG_FILE
+echo ("script started excecuted at $TIMESTAMP" ) &>>LOG_FILE
 
 
 if [ $ID -ne 0 ]

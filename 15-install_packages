@@ -8,7 +8,7 @@ N="\e[0m"
 
 LOG_FILE="/tmp/$0-$TIMESTAMP.log"
 
-echo ("script started excecuted at $TIMESTAMP") &>> $LOG_FILE
+#echo ("script started excecuted at $TIMESTAMP") &>> $LOG_FILE
 
 VALIDATE()
 {
